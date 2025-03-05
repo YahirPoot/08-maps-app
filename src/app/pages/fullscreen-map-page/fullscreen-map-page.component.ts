@@ -78,7 +78,15 @@ export class FullscreenMapPageComponent implements AfterViewInit{
     map.on('moveend', () => {
       const center = map.getCenter();
       this.coordinates.set(center);
-    })
+    });
+
+    map.on('load', () => {
+      console.log('Map loaded');
+    });
+
+    // Controles propios de mapbox
+    map.addControl(new mapboxgl.FullscreenControl());
+    map.addControl(new mapboxgl.NavigationControl());
 
     this.map.set(map);
   }
