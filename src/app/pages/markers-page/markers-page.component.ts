@@ -8,12 +8,6 @@ mapboxgl.accessToken = environment.mapboxKey;
   selector: 'app-markers-page',
   imports: [],
   templateUrl: './markers-page.component.html',
-  styles: `
-    div {
-      width: 100vw;
-      height: calc(100vh - 64px);
-    }
-  `
 })
 export class MarkersPageComponent implements AfterViewInit {
 
